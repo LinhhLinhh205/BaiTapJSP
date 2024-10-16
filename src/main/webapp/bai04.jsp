@@ -9,20 +9,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Đổi tiền</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
     </head>
     <body>
-        <h1>ĐỔI NGOẠI TỆ</h1>
-        <form action="bai04.jsp" method="POST">
-            <table border="0">
-                <tr>
+        <h1 class="text-center" >ĐỔI NGOẠI TỆ</h1>
+        <form action="bai04.jsp" method="POST" class="text-center">
+            <table class="table" >
+                <tr>   
+                    <td></td>
                     <td>Cho biết số tiền:</td>
-                    <td><input type="text" name="sotien" value="" /></td>
+                    <td><input style="width: 30rem" type="text" name="sotien" value="" /></td>
                 </tr>
 
                 <tr>
+                    <td></td>
                     <td>Chọn loại ngoại tệ: </td>
-                    <td><select name="loaingoaite">
+                    <td><select style="width: 30rem" name="loaingoaite">
                             <option value="1">USD</option>
                             <option value="2">GBP</option>
                             <option value="3">EUR</option>
@@ -32,9 +35,14 @@
                 </tr>                
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Đổi tiền" />
-                        <input type="reset"  value="Tiếp tục" />
+                    <td></td>
+                    <td><input class="rounded border-info bg-info" type="submit" value="Đổi tiền" />
+                        <input class="rounded border-info bg-info" type="reset"  value="Tiếp tục" />
                     </td>                   
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <hr>
             </table>
@@ -45,7 +53,7 @@
             if (loai != null && sotien != null) {
                 int loaingoaite = Integer.parseInt(loai);
                 double tien = Double.parseDouble(sotien);
-                double Tientra = 0;                
+                double Tientra = 0;
                 switch (loaingoaite) {
                     case 1:
                         Tientra = tien * 21380.00;
@@ -67,8 +75,10 @@
 
 
         %>
-        Số tiền đổi được: <%=Tientra%>
+        <h2 class="text-center">Số tiền đổi được: <%=Tientra%></h2>
         <%
             }%>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" ></script>
     </body>
 </html>

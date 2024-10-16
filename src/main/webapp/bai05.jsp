@@ -14,13 +14,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tra cứu điểm</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     </head>
     <body>
-        <h1>TRA CỨU ĐIỂM</h1>
-        <form action="bai05.jsp" method="POST">
+        <h1 class="text-center font-weight-bold">TRA CỨU ĐIỂM</h1>
+        <form action="bai05.jsp" method="POST" class="text-center">
             Số báo danh: <input type="text" name="sobd" value="" />
             Họ tên: <input type="text" name="hoten" value="" />
-            <button type="submit">Tra cứu</button>
+            <button type="submit" class="bg-warning text-white border-0 font-weight-bold">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>Tra cứu</button>
         </form>
         <%
             request.setCharacterEncoding("UTF-8");
@@ -43,15 +46,15 @@
                     if (ps != null) {
                         rs = ps.executeQuery();
         %>
-        <table border="1">           
+        <table class="table table-bordered">           
             <tr>
-                <th>Số báo danh</th>
-                <th>Họ tên</th>
-                <th>Địa chỉ</th>
-                <th>Toán</th>
-                <th>Lý</th>
-                <th>Hoá</th>
-                <th>Tổng điểm</th>
+                <th scope="col">Số báo danh</th>
+                <th scope="col">Họ tên</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Toán</th>
+                <th scope="col">Lý</th>
+                <th scope="col">Hoá</th>
+                <th scope="col">Tổng điểm</th>
             </tr>
             <%
                 while (rs.next()) {
@@ -76,6 +79,7 @@
                 }
             }
         %>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" ></script>
     </body>
 </html>
