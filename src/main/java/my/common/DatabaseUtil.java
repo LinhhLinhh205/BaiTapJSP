@@ -17,7 +17,7 @@ public class DatabaseUtil {
         Connection con = null;
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QLTS", "sa", "123");
+            con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QLTS", "sa", "sa");
         }catch(Exception ex){
             System.out.println("ERROR: "+ex.toString());
         }

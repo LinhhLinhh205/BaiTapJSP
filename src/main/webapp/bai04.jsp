@@ -14,7 +14,7 @@
     </head>
     <body>
         <h1 class="text-center" >ĐỔI NGOẠI TỆ</h1>
-        <form action="bai04.jsp" method="POST" class="text-center">
+        <form action="bai04.jsp" method="POST" class="container">
             <table class="table" >
                 <tr>   
                     <td></td>
